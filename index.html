@@ -1,7 +1,263 @@
-{
-  "description": "An exquisite, high-end fine jewelry brand with royal Gold, Ivory, and Maroon aesthetics, featuring AI styling advice, smart gemologist concierge, real-time analytics, and loyalty features.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison d'Aurelia — Haute Fine Joaillerie</title>
+    <!-- Premium Google Fonts: Inter (Sans-serif) & Playfair Display (Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        gold: {
+                            light: '#FCFBF8',
+                            mid: '#D4AF37',
+                            dark: '#AA820A'
+                        },
+                        maroon: {
+                            mid: '#70001A',
+                            dark: '#4A0010'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth, premium scrollbars and transitions */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FCFBF8;
+            color: #1A1A1A;
+            overflow-x: hidden;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(26, 26, 26, 0.4), rgba(26, 26, 26, 0.6)), url('https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- Premium Announcement Bar -->
+    <div class="bg-maroon-mid text-gold-light py-2 px-4 text-center text-[11px] tracking-[2px] font-sans font-medium uppercase border-b border-gold-mid/25">
+        Complimentary Insured Shipping Across India • Experience Royal Craftsmanship
+    </div>
+
+    <!-- Luxury Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-[#FCFBF8]/95 backdrop-blur-md border-b border-gold-mid/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Mark / Logo -->
+            <a href="#" class="flex flex-col items-center group">
+                <span class="font-serif text-2xl font-bold tracking-[3px] text-neutral-950 uppercase group-hover:text-gold-mid transition-colors duration-300">
+                    AURELIA
+                </span>
+                <span class="text-[9px] tracking-[4px] text-neutral-500 uppercase font-sans font-semibold mt-0.5">
+                    HAUTE FINE JOAILLERIE
+                </span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 font-sans text-xs font-semibold tracking-[2.5px] uppercase text-neutral-800">
+                <a href="#collections" class="hover:text-gold-mid transition-colors">Our Collections</a>
+                <a href="#about" class="hover:text-gold-mid transition-colors">The Atelier</a>
+                <a href="#contact" class="hover:text-gold-mid transition-colors">Contact Support</a>
+            </nav>
+
+            <!-- Quick Action Icons -->
+            <div class="flex items-center space-x-6 text-neutral-800">
+                <a href="#collections" class="hover:text-gold-mid transition-colors p-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </a>
+                <a href="#contact" class="hover:text-gold-mid transition-colors p-2 relative">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Exquisite Hero Section -->
+    <section class="hero-bg h-[70vh] flex items-center justify-center relative px-6 text-center select-none">
+        <div class="absolute inset-0 bg-neutral-950/20 pointer-events-none"></div>
+        <div class="max-w-3xl z-10 space-y-6">
+            <span class="text-[11px] md:text-xs tracking-[5px] text-gold-mid font-sans font-semibold uppercase block animate-pulse">
+                introducing the imperial heritage collection
+            </span>
+            <h1 class="font-serif text-4xl md:text-6xl text-gold-light font-bold leading-tight tracking-wide">
+                Where Prestige<br class="hidden md:block" /> Meets Royalty
+            </h1>
+            <p class="font-sans text-xs md:text-sm text-neutral-200 tracking-wider max-w-xl mx-auto leading-relaxed">
+                Hand-forged gold filigree and certified gemstones sculpted for the modern connoisseur of fine taste.
+            </p>
+            <div class="pt-4">
+                <a href="#collections" class="inline-block py-3.5 px-8 bg-gold-mid hover:bg-gold-dark text-neutral-950 font-sans font-bold text-[10px] uppercase tracking-[3px] rounded transition-all duration-300 transform hover:scale-105">
+                    Explore Masterpieces
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Collections Grid -->
+    <main id="collections" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center space-y-3 mb-16">
+            <span class="text-[10px] tracking-[4px] text-gold-mid uppercase font-sans font-bold">our curated designs</span>
+            <h2 class="font-serif text-3xl md:text-4xl text-neutral-900 font-bold tracking-wide">The Aurelia Collections</h2>
+            <div class="w-16 h-0.5 bg-maroon-mid mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Piece 1 -->
+            <div class="bg-white border border-gold-mid/10 rounded-lg overflow-hidden group hover:shadow-xl transition-all duration-500">
+                <div class="relative overflow-hidden aspect-[4/5] bg-neutral-100">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Royal Necklace" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="p-6 text-center space-y-2">
+                    <span class="text-[10px] uppercase tracking-wider text-neutral-400 font-semibold block">Vermeil Chokers</span>
+                    <h3 class="font-serif text-lg font-bold text-neutral-800">The Rajkumari Vermeil Collar</h3>
+                    <p class="text-gold-dark font-sans text-xs font-semibold tracking-wider">₹ 1,85,000</p>
+                </div>
+            </div>
+
+            <!-- Piece 2 -->
+            <div class="bg-white border border-gold-mid/10 rounded-lg overflow-hidden group hover:shadow-xl transition-all duration-500">
+                <div class="relative overflow-hidden aspect-[4/5] bg-neutral-100">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80" alt="Royal Ring" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="p-6 text-center space-y-2">
+                    <span class="text-[10px] uppercase tracking-wider text-neutral-400 font-semibold block">Heritage Rings</span>
+                    <h3 class="font-serif text-lg font-bold text-neutral-800">Imperial Emerald Signet</h3>
+                    <p class="text-gold-dark font-sans text-xs font-semibold tracking-wider">₹ 2,40,000</p>
+                </div>
+            </div>
+
+            <!-- Piece 3 -->
+            <div class="bg-white border border-gold-mid/10 rounded-lg overflow-hidden group hover:shadow-xl transition-all duration-500">
+                <div class="relative overflow-hidden aspect-[4/5] bg-neutral-100">
+                    <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=600&q=80" alt="Bangles" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="p-6 text-center space-y-2">
+                    <span class="text-[10px] uppercase tracking-wider text-neutral-400 font-semibold block">Royal Filigree</span>
+                    <h3 class="font-serif text-lg font-bold text-neutral-800">Avas Vikas Gold Kada</h3>
+                    <p class="text-gold-dark font-sans text-xs font-semibold tracking-wider">₹ 4,10,000</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 🌟 LUXURY BRAND FOOTER (UPGRADED DESIGN) -->
+    <footer id="contact" class="bg-[#141110] text-[#EAD0A8] py-14 px-6 md:px-12 border-t border-[#D4AF37]/35 relative font-sans">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14">
+            
+            <!-- Column 1: Brand Description -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-gold-mid" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"></path>
+                    </svg>
+                    <!-- Font-family: 'Inter', 15px, Bold, Uppercase, 1.5px Letter Spacing -->
+                    <span class="font-sans text-[15px] font-bold tracking-[1.5px] text-[#FCFBF8] uppercase">
+                        Maison D'Aurelia
+                    </span>
+                </div>
+                <!-- Font-size: 12.5px, line-height: 1.6, color: premium soft gray (#CECECE) -->
+                <p class="font-sans text-[12.5px] leading-[1.6] text-[#CECECE] font-normal">
+                    Maison d'Aurelia is India's premier boutique for avant-garde gold filigree and regal vermeil jewelry. We weave the deep prestige of royal maroon accents and ivory aesthetics, hand-forging perfection for the modern connoisseur.
+                </p>
+                <div class="flex items-center gap-3 pt-1">
+                    <span class="font-sans text-[11px] text-[#CECECE]/60 font-semibold tracking-[1px] mr-1">FOLLOW US:</span>
+                    <a href="https://instagram.com" target="_blank" class="w-7 h-7 rounded-full bg-neutral-900 border border-[#D4AF37]/25 flex items-center justify-center hover:border-gold-mid transition-all">
+                        <span class="text-[10px] text-[#FCFBF8]">IG</span>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" class="w-7 h-7 rounded-full bg-neutral-900 border border-[#D4AF37]/25 flex items-center justify-center hover:border-gold-mid transition-all">
+                        <span class="text-[10px] text-[#FCFBF8]">FB</span>
+                    </a>
+                </div>
+                <div class="font-sans text-[11px] text-[#CECECE]/60 tracking-[1px] pt-1">
+                    © 1892 - 2026 MAISON D'AURELIA • REGISTERED TRUST
+                </div>
+            </div>
+
+            <!-- Column 2: Essential Policies -->
+            <div class="space-y-6">
+                <h5 class="font-sans text-[13px] font-bold tracking-[1.5px] text-[#FCFBF8] uppercase border-b border-[#D4AF37]/15 pb-2.5">
+                    Essential Policies
+                </h5>
+                <!-- Spacing/line-height: 1.8 for links, Font size: 13px, Regular -->
+                <ul class="space-y-3 font-normal text-[#CECECE]">
+                    <li>
+                        <a href="#" class="font-sans text-[13px] font-normal leading-[1.8] hover:text-gold-mid transition-all hover:translate-x-1.5 duration-200 block text-left py-1 text-[#CECECE]">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="font-sans text-[13px] font-normal leading-[1.8] hover:text-gold-mid transition-all hover:translate-x-1.5 duration-200 block text-left py-1 text-[#CECECE]">
+                            Shipping Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="font-sans text-[13px] font-normal leading-[1.8] hover:text-gold-mid transition-all hover:translate-x-1.5 duration-200 block text-left py-1 text-[#CECECE]">
+                            Return Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="font-sans text-[13px] font-normal leading-[1.8] hover:text-gold-mid transition-all hover:translate-x-1.5 duration-200 block text-left py-1 text-[#CECECE]">
+                            Loyalty Patron Club
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Support & Agra Address -->
+            <div class="space-y-6">
+                <h5 class="font-sans text-[13px] font-bold tracking-[1.5px] text-[#FCFBF8] uppercase border-b border-[#D4AF37]/15 pb-2.5">
+                    Customer Support
+                </h5>
+                <div class="space-y-5 font-normal text-[#CECECE]">
+                    <div class="flex items-start gap-3">
+                        <svg class="w-4.5 h-4.5 text-gold-mid mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"></path></svg>
+                        <div>
+                            <span class="font-sans text-[11px] uppercase font-semibold block text-[#FCFBF8]/45 tracking-[1px] mb-1">Maison Desk</span>
+                            <a href="mailto:support@maisondaurelia.in" class="font-sans text-[13px] font-normal leading-[1.8] text-[#CECECE] hover:text-gold-mid transition-colors select-all">
+                                support@maisondaurelia.in
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <svg class="w-4.5 h-4.5 text-gold-mid mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path></svg>
+                        <div class="leading-relaxed">
+                            <span class="font-sans text-[11px] uppercase font-semibold block text-[#FCFBF8]/45 tracking-[1px] mb-1">Corporate Atelier</span>
+                            <!-- Address text: 12.5px, line-height 1.6, soft gray -->
+                            <p class="font-sans text-[12.5px] leading-[1.6] text-[#CECECE] font-normal">
+                                Sector 4/R Avas Vikas colony,<br />
+                                Bodla Agra, Uttar Pradesh,<br />
+                                282007, India
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Global Footer Bottom Credit: 11px, uppercase, centered, 2px letter-spacing -->
+        <div class="mt-10 pt-6 border-t border-[#D4AF37]/15 text-center">
+            <p class="font-sans text-[11px] text-[#CECECE]/60 uppercase tracking-[2px] text-center leading-relaxed">
+                ESTABLISHED IN PARIS • BROUGHT TO LIFE BY ELITE SCULPTORS IN UTTAR PRADESH • SECURE INTEGRATIONS GUARANTEED
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
